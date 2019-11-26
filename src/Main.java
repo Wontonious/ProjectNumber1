@@ -4,13 +4,22 @@ public class Main {
     //Code your solution to problem number one here
     static int problemOne(String s){
         int answer = 0;
-        //your code here
+        for(int i=0;i<s.length();i++){
+            String a = s.substring(i, i+1);
+            if(a.equals("a")||a.equals("e")||a.equals("i")||a.equals("o")||a.equals("u")){
+                answer++;
+            }
+        }
         return answer;
     }
     //Code you problem number two here
     static int problemTwo(String s){
         int answer = 0;
-        //your code here
+        for(int i=0;i<s.length()-2;i++){
+            if(s.substring(i,i+3).equals("bob")){
+                answer++;
+            }
+        }
         return answer;
     }
     //Code your solution to problem number 3 here
@@ -28,9 +37,14 @@ public class Main {
         all possible cases.  If you have 100% success then there is no bugs in your methods.
          */
         String s;
-
-        //Problem 1
+        String c = "chicken";
+        System.out.println(c.substring(0,3));
         s = scan.nextLine();
+        //Problem 1
         System.out.println(problemOne(s));
+        //Problem 2
+        System.out.println(problemTwo(s));
+        //Problem 3
+        System.out.println(problemThree(s));
     }
 }
